@@ -12,18 +12,20 @@
 // }
 
 //TODO: Solution 2
-function reverse(str) {
-  let reversedString = "";
+// function reverse(str) {
+//   let reversedString = "";
 
-  for (let c of str) {
-    reversedString = c + reversedString;
-  }
-  return reversedString;
-}
+//   for (let c of str) {
+//     reversedString = c + reversedString;
+//   }
+//   return reversedString;
+// }
 
 //TODO: Solution 3
-// function reverse(str) {
-//   console.log(str.split("").reverse().join(""));
-// }
+function reverse(str) {
+  return str.split("").reduce((prev, accum) => accum + prev, "");
+}
+
+console.log(reverse("Bibek"));
 
 module.exports = reverse;
